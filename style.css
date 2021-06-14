@@ -1,0 +1,38 @@
+#expand-toggle {
+	display: none;
+}
+
+.Expandable   {
+    visibility: collapse;
+	background: gray;
+	color: white;
+
+}
+
+
+
+#expand-btn {
+	display: inline-block;
+	margin-top: 12px;
+	padding: 10px 12px;
+	background-color: red;
+	border: 1px solid green;
+	border-radius: 6px;
+	transition: 0.5s;
+}
+
+#expand-btn::before {
+	content: "Mostra righe";
+}
+
+#expand-toggle:checked ~ * .Expandable {
+	visibility: visible;
+}
+
+#expand-toggle:checked ~ #expand-btn {
+	background-color: #88ff88;
+}
+
+#expand-toggle:checked ~ #expand-btn::before {
+	content: "Nascondi righe";
+}
